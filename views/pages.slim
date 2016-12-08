@@ -1,0 +1,21 @@
+div class="row" style="vertical-align: bottom;"
+  div class="col-xs-9"
+    h3 All Pages
+  div class="col-xs-3"
+    button{ type="button" 
+      class="btn btn-success" 
+      data-toggle="modal" 
+      data-target="#newPageModal" 
+    } + New Page 
+    
+table class="table"
+  thead
+    tr
+      th Facebook Page Name
+  tbody
+    - @data&.pages&.each do |page|
+      tr
+        td 
+          a href="/page/#{page[:id]}" #{page[:name]}
+
+include :page_new_modal_partial
