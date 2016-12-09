@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-Groups = Struct.new :groups
+Pages = Struct.new :pages
